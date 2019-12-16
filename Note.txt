@@ -1,0 +1,23 @@
+Steps:
+
+Download Eclipse IDE for Enterprise Java Developers.
+
+Version: 2019-09 R (4.13.0)
+Build id: 20190917-1200
+
+Download weblogic fmw_12.2.1.0.0_wls (zip: fmw_12.2.1.0.0_wls_Disk1_1of1)
+
+Download apache-ant-1.9.14
+
+Download jdk1.8.0_171
+
+Open Eclipse -> import (Existing Projects into Workspace)
+
+Add weblogic.jar on below path:
+open build.xml -> Run As -> External Tool Configurations... -> select Classpath -> click on Ant Home(Default) -> Select Add External JARS... -> add weblogic.jar and wlclient.jar from oracle domain_home ->  Apply -> Run
+
+Ant Build setting:
+open build.xml -> Run As -> Ant Build... -> Select Argument: (-v) -> Select Target (all[default], build-service) -> Select JRE and add jdk path -> Apply -> Run
+
+War location:
+SoapWS\output\helloWorldEar\com\bt\ws\HelloWorldImpl.war
